@@ -3,6 +3,7 @@ from flask_cors import CORS  # Import CORS
 from scanner import scan_barcode
 from db import collection1, collection2
 import logging
+import os
 
 logging.basicConfig(level=logging.DEBUG)
 
@@ -42,4 +43,5 @@ def scan():
     })
 
 if __name__ == '__main__':
-    app.run(host="0.0.0.0", port=5000, debug=True)
+    port = int(os.environ.get("PORT", 5000))  # Use Render's PORT
+    app.run(host="0.0.0.0", port=port, debug=True)
