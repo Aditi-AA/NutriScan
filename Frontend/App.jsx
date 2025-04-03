@@ -27,31 +27,7 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator>
         
-        <Stack.Screen
-          name="PreferenceAllergen"
-          component={PreferenceAllergen}
-          options={{ headerShown: false }}
-        />
-        <Stack.Screen
-          name="PreferenceAdditive"
-          component={PreferenceAdditive}
-          options={{ headerShown: false }}
-        />
-        <Stack.Screen
-          name="PreferenceDiet"
-          component={PreferenceDiet}
-          options={{ headerShown: false }}
-        />
-        <Stack.Screen
-          name="PreferenceIngredient"
-          component={PreferenceIngredient}
-          options={{ headerShown: false }}
-        />
-        <Stack.Screen
-          name="PreferenceNutrition"
-          component={PreferenceNutrition}
-          options={{ headerShown: false }}
-        />
+        
 
         <Stack.Screen
           name="Onboard1"
@@ -81,6 +57,31 @@ export default function App() {
         <Stack.Screen
           name="Signup"
           component={SignupScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="PreferenceAllergen"
+          component={PreferenceAllergen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="PreferenceAdditive"
+          component={PreferenceAdditive}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="PreferenceDiet"
+          component={PreferenceDiet}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="PreferenceIngredient"
+          component={PreferenceIngredient}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="PreferenceNutrition"
+          component={PreferenceNutrition}
           options={{ headerShown: false }}
         />
         <Stack.Screen
