@@ -38,6 +38,7 @@ fastjsonschema==2.20.0
 filelock==3.12.2
 firebase-admin==6.5.0
 Flask==2.2.3
+flask-cors
 Flask-MySQLdb==1.0.1
 Flask-PyMongo==2.3.0
 flatbuffers==23.5.26
