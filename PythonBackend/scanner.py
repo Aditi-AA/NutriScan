@@ -1,17 +1,20 @@
 import cv2
-from pyzbar.pyzbar import decode
 
 def scan_barcode():
     cap = cv2.VideoCapture(0)  # Open the camera
+    detector = cv2.QRCodeDetector()
+
     while True:
         ret, frame = cap.read()
         if not ret:
             print("❌ Failed to capture frame")
             break
 
-        decoded_objects = decode(frame)
-        for obj in decoded_objects:
-            barcode_number = obj.data.decode("utf-8").strip()  # Trim any extra spaces
+        # Detect and decode barcode
+        data, bbox, _ = detector.detectAndDecode(frame)
+
+        if data:  # If barcode is detected
+            barcode_number = data.strip()  # Trim any extra spaces
             cap.release()
             cv2.destroyAllWindows()
             return barcode_number  
