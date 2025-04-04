@@ -82,7 +82,6 @@ keras==2.13.1
 kiwisolver==1.4.5
 langid==1.1.6
 libclang==16.0.6
-lxml==4.9.2
 Markdown==3.4.4
 MarkupSafe==2.1.2
 matplotlib==3.8.2
