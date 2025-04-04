@@ -4,6 +4,7 @@ from scanner import scan_barcode
 from db import collection1, collection2
 import logging
 import os
+os.environ["LD_LIBRARY_PATH"] = "/opt/render/project/src/usr/lib/x86_64-linux-gnu"
 
 logging.basicConfig(level=logging.DEBUG)
 
