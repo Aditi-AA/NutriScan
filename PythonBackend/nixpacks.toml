@@ -1,6 +1,6 @@
 [phases.setup]
 nixPkgs = [
-    "python311",
+    "python310",
     "zlib",
     "libffi",
     "openssl",
