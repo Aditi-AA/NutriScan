@@ -4,16 +4,11 @@ from scanner import scan_barcode
 from db import collection1, collection2
 import logging
 import os
-os.environ["LD_LIBRARY_PATH"] = "/opt/render/project/src/usr/lib/x86_64-linux-gnu"
 
 logging.basicConfig(level=logging.DEBUG)
 
 app = Flask(__name__)
 CORS(app)  # Enable CORS for all routes
-
-@app.route("/")
-def home():
-    return jsonify({"message": "✅ API is running!"})
 
 @app.route("/check_barcode", methods=['GET'])
 def check_barcode():
