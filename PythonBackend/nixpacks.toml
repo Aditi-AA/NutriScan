@@ -5,7 +5,7 @@ nixPkgs = [
     "libffi",
     "openssl",
     "gcc",
-    "libzbar"
+    "zbar"  # Correct package name instead of libzbar
 ]
 
 [phases.install]
