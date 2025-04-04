@@ -11,6 +11,10 @@ logging.basicConfig(level=logging.DEBUG)
 app = Flask(__name__)
 CORS(app)  # Enable CORS for all routes
 
+@app.route("/")
+def home():
+    return jsonify({"message": "✅ API is running!"})
+
 @app.route("/check_barcode", methods=['GET'])
 def check_barcode():
     try:
