@@ -5,12 +5,13 @@ nixPkgs = [
     "libffi",
     "openssl",
     "gcc",
-    "libzbar"  # Required for pyzbar
+    "libzbar"
 ]
 
 [phases.install]
 commands = [
     "python -m pip install --upgrade pip",
+    "pip install wheel",
     "pip install -r requirements.txt"
 ]
 
