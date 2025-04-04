@@ -1,19 +1,17 @@
 #!/bin/bash
 
-# Download and install libzbar
-curl -fsSL http://ftp.us.debian.org/debian/pool/main/z/zbar/libzbar0_0.23.90-1_amd64.deb -o libzbar.deb
-dpkg -x libzbar.deb .
+# Install system dependencies (libzbar0)
+sudo apt-get update
+sudo apt-get install -y libzbar0
 
 # Verify installation
-ls -l ./usr/lib/x86_64-linux-gnu/
-ls -l ./usr/lib/
+echo "Checking for zbar library:"
+ldconfig -p | grep zbar
 
-# Set the library path
-export LD_LIBRARY_PATH=$PWD/usr/lib/x86_64-linux-gnu:$LD_LIBRARY_PATH
+# Print library paths for debugging
+echo "Library paths:"
+echo $LD_LIBRARY_PATH
 
-# Print library paths to debug
-echo "LD_LIBRARY_PATH: $LD_LIBRARY_PATH"
-
-# Install dependencies
+# Install Python dependencies
 pip install --upgrade pip
 pip install -r requirements.txt
