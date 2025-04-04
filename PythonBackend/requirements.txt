@@ -125,7 +125,6 @@ mongoose==0.0.1
 mpmath==1.3.0
 msgpack==1.0.8
 mysql-connector-python==8.0.23
-mysqlclient==2.1.1
 nbclient==0.10.0
 nbconvert==7.16.4
 nbformat==5.10.4
