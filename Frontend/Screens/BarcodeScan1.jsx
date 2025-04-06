@@ -18,7 +18,7 @@ const ProductDetailsScreen = () => {
     const fetchProductDetails = async () => {
       try {
         console.log("Fetching product details...");
-        const response = await fetch(`http://192.168.1.10:5001/product/${barcode}`);
+        const response = await fetch(`http://192.168.0.112:5001/product/${barcode}`);
         const data = await response.json();
         console.log("Product details fetched:", data);
   
@@ -61,7 +61,7 @@ const ProductDetailsScreen = () => {
     const fetchSuggestedProducts = async () => {
       try {
         console.log("Fetching similar products...");
-        const response = await fetch(`http://192.168.1.10:5001/similar/${barcode}`);
+        const response = await fetch(`http://192.168.0.112:5001/similar/${barcode}`);
         const data = await response.json();
         console.log("Similar products fetched:", data);
   

@@ -24,7 +24,7 @@ export default function LoginScreen({ navigation }) {
     }
   
     try {
-      const response = await fetch("http://192.168.1.10:5001/login", {
+      const response = await fetch("http://192.168.0.112:5001/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -43,7 +43,7 @@ export default function LoginScreen({ navigation }) {
         
         if (data.status === "ok") {
           Alert.alert("Success", "You are logged in!");
-          navigation.navigate("Home");
+          navigation.navigate("PreferenceAllergen");
         } else {
           Alert.alert("Error", data.message || "Invalid credentials");
         }
